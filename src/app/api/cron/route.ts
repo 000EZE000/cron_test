@@ -5,6 +5,7 @@ import { getFormMail, promiseApiNodemailer } from "@/config";
 // };
 
 export async function GET(request: any) {
+  console.log({ data: "vamoss1" });
   await promiseApiNodemailer(
     getFormMail({
       from: "eds",
