@@ -3,9 +3,6 @@ import { IFormMail } from "./type";
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
-  host: "smtp.sendgrid.net",
-  port: 465,
-  secure: true,
   auth: {
     user: "ezequiel.ignacio.sosa@gmail.com",
     pass: "unyohrilzfebybod",
