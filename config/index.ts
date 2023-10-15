@@ -4,8 +4,8 @@ import { IFormMail } from "./type";
 export const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "ezequiel.ignacio.sosa@gmail.com",
-    pass: "unyohrilzfebybod",
+    user: process.env.EMAIL_USER,
+    pass: process.env.API_KEY_EMAIL,
   },
 });
 

@@ -1,13 +1,15 @@
 import { IFormMail } from "@/config/type";
 import nodemailer from "nodemailer"
+import "dotenv/config"
+
 
 export async function GET(request: any) {
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "ezequiel.ignacio.sosa@gmail.com",
-        pass: "unyohrilzfebybod",
+        user: process.env.EMAIL_USER,
+        pass: process.env.API_KEY_EMAIL,
       },
     });
 
