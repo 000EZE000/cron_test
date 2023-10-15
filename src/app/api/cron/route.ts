@@ -1,4 +1,3 @@
-import { getFormMail, promiseApiNodemailer } from "@/config";
 import { IFormMail } from "@/config/type";
 import nodemailer from "nodemailer"
 
@@ -35,7 +34,7 @@ export async function GET(request: any) {
     const data = getFormMail({
       from: "ezequiel.ignacio.sosa@gmail.com",
       to: "ezequiel.ignacio.sosa@gmail.com",
-      subject: "ca",
+      subject: "hello",
       html: "<h1>VAMOSsS </h1>",
     });
     const result = await promiseApiNodemailer(data);

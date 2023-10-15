@@ -91,6 +91,15 @@ export default function Home() {
           <p>Explore the Next.js 13 playground.</p>
         </a>
 
+        <button
+          onClick={() => {
+            fetch("/api/hello")
+              .then((result) => result.json())
+              .then((result) => console.log(result));
+          }}
+        >
+          HELLO
+        </button>
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
