@@ -22,6 +22,7 @@ export const promiseApiNodemailer = (prop: IFormMail) =>
   new Promise((resolve, reject) => {
     transporter.sendMail(prop, (error, info) => {
       if (error) {
+        console.log({ data: "data" })
         return reject(error);
       }
       resolve(info.response);
