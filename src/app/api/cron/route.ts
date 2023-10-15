@@ -1,8 +1,5 @@
 import { getFormMail, promiseApiNodemailer } from "@/config";
 
-export const config = {
-  runtime: "edge",
-};
 
 export async function GET(request: any) {
   try {
